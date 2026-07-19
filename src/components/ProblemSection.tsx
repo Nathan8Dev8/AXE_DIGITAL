@@ -32,8 +32,8 @@ const ProblemSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            Pourquoi votre entreprise<br />
-            n'exploite pas encore tout le potentiel<br />
+            Pourquoi votre <span className="text-brand-blue">entreprise</span><br />
+            n'exploite pas encore tout le <span className="text-brand-blue">potentiel</span><br />
             de l'<span className="text-brand-blue">IA</span>
           </motion.h2>
           <motion.p 

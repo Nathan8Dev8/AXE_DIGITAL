@@ -17,9 +17,9 @@ const Footer: React.FC = () => {
               Cabinet de consulting IA & Solutions numériques adaptées aux entreprises africaines.
             </p>
             <div className="flex gap-3 md:gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-blue transition-colors">
+              {/* <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-blue transition-colors">
                 <Instagram size={18} />
-              </a>
+              </a> */}
               <a href="https://www.linkedin.com/company/axe-digital-community/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-blue transition-colors">
                 <Linkedin size={18} />
               </a>
@@ -60,17 +60,17 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-left">
             <h4 className="font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-4 text-gray-400">
-              <li className="flex items-start gap-3 justify-center md:justify-start">
+              {/* <li className="flex items-start gap-3 justify-center md:justify-start">
                 <MapPin className="mt-1 flex-shrink-0 text-brand-blue" size={18} />
                 <span>Bonamoussadi<br />Ecole publique</span>
-              </li>
+              </li> */}
               <li className="flex items-center gap-x-3 justify-center md:justify-start">
                 <Mail className="flex-shrink-0 text-brand-blue" size={19} />
                 <a href="mailto:contact@axedigital.agency" className="hover:text-white break-all">contact@axedigital.agency</a>
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start">
                 <Phone className="flex-shrink-0 text-brand-blue" size={18} />
-                <span>(+237) 698677355/<br />696232428</span>
+                <span>(+237) 656523837</span>
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-gray-500 text-sm">
-            © 2025 Axe Digital. Tous droits réservés.
+            © 2026 Axe Digital. Tous droits réservés.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm text-gray-500">
             <a href="#" className="hover:text-white transition-colors">Mentions Légales</a>

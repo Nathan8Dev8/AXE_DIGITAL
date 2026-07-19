@@ -52,7 +52,7 @@ const Portfolio: React.FC = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            Nos <span className="text-brand-blue">réalisations</span> en IA<br />et solutions numériques
+            Nos <span className="text-brand-blue">réalisations</span> en IA<br />et solutions <span className="text-brand-blue">numériques</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

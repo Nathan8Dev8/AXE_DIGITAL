@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-gray-900 mb-8">
-            L'intelligence artificielle<br />
+            L'<span className="text-brand-blue">I</span>ntelligence artificielle<br />
             au service de votre <span className="text-brand-blue">croissance</span><br />
             en <span className="text-brand-blue">Afrique</span>
           </h1>

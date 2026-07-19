@@ -24,8 +24,9 @@ const PricingSection: React.FC = () => {
     {
       id: 2,
       name: "Croissance",
-      price: "750 000",
-      currency: "FCFA / mois",
+      price: "À partir de 750 000",
+
+      currency: "FCFA",
       description: "Pour passer à l'action avec des résultats concrets.",
       featured: true,
       buttonText: "Je démarre ma transformation",
@@ -41,8 +42,9 @@ const PricingSection: React.FC = () => {
     {
       id: 3,
       name: "Performance",
-      price: "1 500 000",
-      currency: "FCFA / mois",
+      price: "À partir de 1500 000",
+      currency: "FCFA",
+      
       description: "La solution complète pour les entreprises ambitieuses.",
       featured: false,
       buttonText: "Je veux une solution sur-mesure",
@@ -84,7 +86,7 @@ const PricingSection: React.FC = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Des formules claires, sans frais cachés. Payables en FCFA.
+          Une tarification transparente qui respecte votre budget. Pas de mauvaise surprise, réglez directement en FCFA.
           </p>
         </motion.div>
 
@@ -134,11 +136,7 @@ const PricingSection: React.FC = () => {
                     }`}>{plan.currency}</span>
                   </div>
 
-                  {plan.period && (
-                    <div className={`text-sm mb-4 ${
-                      index % 2 === 0 ? 'text-gray-500' : 'text-white/70'
-                    }`}>{plan.period}</div>
-                  )}
+
 
                   <p className={`leading-relaxed ${
                     index % 2 === 0 ? 'text-gray-600' : 'text-white/90'

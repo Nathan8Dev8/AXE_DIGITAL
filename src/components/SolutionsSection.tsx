@@ -12,7 +12,8 @@ const SolutionsSection: React.FC = () => {
       title: "Agents IA",
       highlightedTitle: "intelligents",
       description: "Des assistants virtuels qui travaillent 24h/24, 7j/7. Automatisation du service client, de la qualification de leads, du traitement de documents, et bien plus encore.",
-      imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPwzaAbjAv0nCXn5BOtnUTIMXwDckp9OwVysx8Sahqug&s=10',
+      imageSrc: '/assets/solutions/img1.png',
+
       cta: "Je veux un agent IA pour mon entreprise",
       reverse: false
     },
@@ -21,7 +22,8 @@ const SolutionsSection: React.FC = () => {
       title: "Applications métiers",
       highlightedTitle: "sur-mesure",
       description: "Des logiciels de gestion adaptés à votre secteur d'activité. Gestion de stock, CRM, ERP, RH, comptabilité : on construit l'outil qu'aucun éditeur ne peut vous fournir.",
-      imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuORaMfzwTmGWgm1PyIldw8IjzBd6MYc3YE6kPTbEjwmK1kl-4xCEj3D0&s=10',
+      imageSrc: '/assets/solutions/img2.png',
+
       cta: "Je veux mon application métier",
       reverse: true
     },
@@ -30,7 +32,8 @@ const SolutionsSection: React.FC = () => {
       title: "Applications mobiles",
       highlightedTitle: "pour l'Afrique",
       description: "Des applications Android et iOS pensées pour l'Afrique. Optimisées pour les connexions instables, légères en données, et adaptées aux usages locaux.",
-      imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvRphCWtWXUWUyiSdlSK8RB-_OknRSG0MYZG_JIWBOxY1aBctigkMr5RI&s=10',
+      imageSrc: '/assets/solutions/img3.png',
+
       cta: "Je veux mon application mobile",
       reverse: false
     }
