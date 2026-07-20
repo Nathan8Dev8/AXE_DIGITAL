@@ -24,7 +24,7 @@ const PricingSection: React.FC = () => {
     {
       id: 2,
       name: "Croissance",
-      price: "À partir de 750 000",
+      price: "750 000",
 
       currency: "FCFA",
       description: "Pour passer à l'action avec des résultats concrets.",
@@ -42,7 +42,7 @@ const PricingSection: React.FC = () => {
     {
       id: 3,
       name: "Performance",
-      price: "À partir de 1500 000",
+      price: "1500 000",
       currency: "FCFA",
       
       description: "La solution complète pour les entreprises ambitieuses.",
