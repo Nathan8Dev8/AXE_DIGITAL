@@ -58,7 +58,7 @@ const SolutionsSection: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
         >
-          3 solutions IA sur-mesure<br />
+          3 solutions sur-mesure<br />
           pour votre <span className="text-brand-blue">entreprise en Afrique</span>
         </motion.h2>
         <motion.p

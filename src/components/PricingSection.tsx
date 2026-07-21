@@ -86,7 +86,7 @@ const PricingSection: React.FC = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Une tarification transparente qui respecte votre budget. Pas de mauvaise surprise, réglez directement en FCFA.
+          Une tarification transparente qui respecte votre budget. Pas de mauvaise surprise.
           </p>
         </motion.div>
 
