@@ -81,7 +81,7 @@ const SuccessMetrics: React.FC = () => {
             </h2>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Découvrez comment nos solutions IA et nos applications métiers transforment 
+            Découvrez comment nos solutions et nos applications métiers transforment 
             les entreprises ambitieuses et les propulsent vers une croissance <br />
             sans précédent.
           </p>

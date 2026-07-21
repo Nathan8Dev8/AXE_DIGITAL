@@ -101,7 +101,7 @@ const TestimonialSection: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Découvrez les retours d'expérience de nos clients
-            qui ont transformé leur activité avec nos solutions IA.
+            qui ont transformé leur activité avec nos solutions.
           </p>
         </motion.div>
 

@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
             <h4 className="font-bold text-lg mb-6">Entreprise</h4>
             <ul className="space-y-3 text-gray-400">
               <li><a href="#nos-realisations" className="hover:text-brand-blue transition-colors">Nos réalisations</a></li>
-              <li><a href="#solutions-ia" className="hover:text-brand-blue transition-colors">Nos solutions IA</a></li>
+              <li><a href="#solutions-ia" className="hover:text-brand-blue transition-colors">Nos solutions</a></li>
               <li><a href="#nos-formules" className="hover:text-brand-blue transition-colors">Nos formules</a></li>
               <li><a href="#ils-nous-font-confiance" className="hover:text-brand-blue transition-colors">Ils nous font confiance</a></li>
               <li><a href="#nous-contacter" className="hover:text-brand-blue transition-colors">Nous contacter</a></li>
