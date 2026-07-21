@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    name: "Plateforme de Gestion Transit et Dédouanement",
-    category: "application de gestion de dédouanement",
+    name: "FINITRANS",
+    category: "Application de gestion de Transit et Dédouanement",
     video: "/assets/Portfolio/video1.mp4",
     color: "bg-orange-500",
   },

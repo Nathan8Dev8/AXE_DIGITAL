@@ -54,6 +54,10 @@ abstract class AppImage {
   static readonly pourquoiCaStagne3 = '/assets/Pourquoi ca stagne/3.PNG';
   static readonly pourquoiCaStagne4 = '/assets/Pourquoi ca stagne/4.JPG';
   static readonly publiciteNaze = '/assets/Pourquoi ca stagne/publicite naze.PNG';
+  static readonly problemAiAgent = '/assets/Pourquoi ca stagne/1.JPG';
+  static readonly problemBusinessApp = '/assets/Pourquoi ca stagne/2.PNG';
+  static readonly problemMobileApp = '/assets/Pourquoi ca stagne/3.PNG';
+  static readonly problemNoDigital = '/assets/Pourquoi ca stagne/4.JPG';
 
   // Solutions
   static readonly solutionPhoto1 = '/assets/solutions/photo_2025-10-25_15-21-37.jpg';
