@@ -1,51 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AppImage from "../image/AppImage";
 
 const projects = [
   {
-    name: "Zenae",
-    category: "Identité Visuelle",
-    image: AppImage.portfolioLyxera,
-    color: "bg-green-600",
-  },
-  {
-    name: "Lyxera",
-    category: "Branding & Formation",
-    image: AppImage.portfolioImage5,
+    name: "Plateforme de Gestion Transit et Dédouanement",
+    category: "application de gestion de dédouanement",
+    video: "/assets/Portfolio/video1.mp4",
     color: "bg-orange-500",
   },
   {
-    name: "Mapa Sarl",
-    category: "Supports de Communication",
-    image: AppImage.portfolioImage2,
-    color: "bg-[#d02e51]",
+    name: "Stella AI",
+    category: "Agent intelligent pour PC",
+    video: "/assets/Portfolio/video2.mp4",
+    color: "bg-violet-600",
   },
   {
-    name: "Skynesys",
-    category: "Support Visuel",
-    image: AppImage.portfolioSkynesys,
-    color: "bg-[#400fa1]",
-  },
-  {
-    name: "Stream Area",
-    category: "Social Media",
-    image: AppImage.portfolioImage4,
-    color: "bg-[#32c4c5]",
-  },
-    {
-    name: "La Grande Royale",
-    category: "Création de Contenu Digital",
-    image: AppImage.portfolioLaGrandeRoyale,
-    color: "bg-[#3d1a07]",
+    name: "SULTAN",
+    category: "Application de Gestion d'une boucherie moderne",
+    video: "/assets/Portfolio/video3.mp4",
+    color: "bg-red-600",
   },
 ];
 
 const Portfolio: React.FC = () => {
   return (
-    <section id="nos-realisations" className="py-24 bg-white">
-      <div className="container mx-auto max-w-6xl px-4">
-        <div className="text-center mb-16">
+    <section id="nos-realisations" className="py-24 bg-white overflow-hidden">
+      <div className="container mx-auto max-w-6xl px-4 mb-16">
+        <div className="text-center">
           <motion.h2
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -65,52 +46,50 @@ const Portfolio: React.FC = () => {
             des entreprises africaines.
           </motion.p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative rounded-3xl overflow-hidden cursor-pointer shadow-lg"
-            >
-              {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
+      {/* Centered wide container with vertical alignment, spacing, and rounded corners */}
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 flex flex-col gap-8">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="group relative w-full rounded-3xl overflow-hidden cursor-pointer aspect-[16/9] md:aspect-[21/9] shadow-lg"
+          >
+            {/* Video Player */}
+            <div className="w-full h-full bg-gray-100">
+              <video
+                src={project.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                <h3 className="text-white text-3xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  {project.name}
-                </h3>
-                <p className="text-gray-300 text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                  {project.category}
-                </p>
-                <div
-                  className={`h-1 w-16 ${project.color} mt-4 rounded-full translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100`}
-                ></div>
-              </div>
-
-              {/* Badge always visible */}
-              <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-16 z-20">
+              <h3 className="text-white text-2xl md:text-4xl font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 {project.name}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </h3>
+              <p className="text-gray-300 text-base md:text-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                {project.category}
+              </p>
+              <div
+                className={`h-1 w-20 md:w-28 ${project.color} mt-4 rounded-full translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100`}
+              ></div>
+            </div>
 
-        {/* <div className="text-center mt-12">
-          <button className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-3 rounded-full font-bold transition-all duration-300">
-            Voir tous les projets
-          </button>
-        </div> */}
+            {/* Badge always visible */}
+            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-bold shadow-sm z-10">
+              {project.name}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
