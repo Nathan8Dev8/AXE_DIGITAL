@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import AppImage from "../image/AppImage";
@@ -6,47 +6,7 @@ import { openWhatsApp, WHATSAPP_MESSAGES } from "../utils/whatsapp";
 
 
 
-/* ── Typewriter ── */
-function useTypewriter(text: string, speed = 38) {
-  const [n, setN] = useState(0);
-  useEffect(() => {
-    setN(0);
-    const id = setInterval(() =>
-      setN(p => { if (p >= text.length) { clearInterval(id); return p; } return p + 1; }), speed);
-    return () => clearInterval(id);
-  }, [text, speed]);
-  return n;
-}
 
-function TypewriterTitle({ n, total }: { n: number; total: number }) {
-  const full = "L'Intelligence Artificielle\nau service de votre croissance\nen Afrique";
-  // I=2, A=15, croissance=48-58, Afrique=62-69
-  const HL = [{ s:2,e:3 },{ s:15,e:16 },{ s:48,e:58 },{ s:62,e:69 }];
-  const visible = full.slice(0, n);
-  const lines = visible.split("\n");
-  const parts: React.ReactNode[] = [];
-  let ci = 0;
-
-  lines.forEach((lineText, li) => {
-    if (li > 0) parts.push(<br key={`br${li}`} />);
-    const lineChars: React.ReactNode[] = [];
-    [...lineText].forEach(ch => {
-      const abs = ci;
-      const hi = HL.some(h => abs >= h.s && abs < h.e);
-      lineChars.push(hi ? <span key={ci} className="text-[#0238d6] font-bold">{ch}</span> : <React.Fragment key={ci}>{ch}</React.Fragment>);
-      ci++;
-    });
-    ci++;
-    parts.push(
-      <span key={`line${li}`} className="inline-block whitespace-nowrap">
-        {lineChars}
-      </span>
-    );
-  });
-
-  if (n < total) parts.push(<span key="cur" style={{ color:"#0238d6", animation:"blink .8s step-end infinite", fontWeight:300 }}>|</span>);
-  return <>{parts}</>;
-}
 
 /* ── Blue bubbles ── */
 const BUBBLES = [
@@ -63,8 +23,6 @@ const BUBBLES = [
 
 /* ── Main Hero Component ── */
 const Hero: React.FC = () => {
-  const full = "L'Intelligence Artificielle\nau service de votre croissance\nen Afrique";
-  const n = useTypewriter(full, 38);
 
   return (
     <section style={{ position:"relative", minHeight:"100vh", overflow:"hidden" }}
@@ -97,7 +55,9 @@ const Hero: React.FC = () => {
       <div className="container mx-auto max-w-6xl text-center relative z-10">
         <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration:.6 }}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-gray-900 mb-8">
-            <TypewriterTitle n={n} total={full.length} />
+            L&apos;<span className="text-[#0238d6]">I</span>ntelligence <span className="text-[#0238d6]">A</span>rtificielle<br />
+            au service de votre <span className="text-[#0238d6]">croissance</span><br />
+            en <span className="text-[#0238d6]">Afrique</span>
           </h1>
 
           <p className="max-w-3xl mx-auto text-lg text-gray-600 mb-10 leading-relaxed relative z-10 pt-2">
