@@ -42,7 +42,7 @@ const PricingSection: React.FC = () => {
     {
       id: 3,
       name: "Performance",
-      price: "1500 000",
+      price: "1 500 000",
       currency: "FCFA",
       
       description: "La solution complète pour les entreprises ambitieuses.",
@@ -98,11 +98,7 @@ const PricingSection: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`relative ${
-                index % 2 === 0
-                  ? 'bg-white shadow-xl border border-gray-200' 
-                  : 'bg-[#0238d6] shadow-2xl border border-[#0238d6]'
-              } rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300`}
+              className="relative bg-white shadow-xl border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
               {/* Featured Badge */}
               {plan.featured && (
@@ -116,53 +112,39 @@ const PricingSection: React.FC = () => {
               <div className="relative p-8">
                 {/* Plan Header */}
                 <div className="text-center mb-8">
-                  <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${
-                    index % 2 === 0 ? 'text-gray-900' : 'text-white'
-                  }`}>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
                     Pack{' '}
-                    <span className={index % 2 === 0 ? 'text-brand-blue' : 'text-white'}>
+                    <span className="text-brand-blue">
                       {plan.name}
                     </span>
                   </h3>
                   
+                  {(index === 1 || index === 2) && (
+                    <div className="text-sm font-medium text-gray-500 mb-1">
+                      À partir de
+                    </div>
+                  )}
+                  
                   <div className="flex items-baseline justify-center mb-4">
-                    <span className={`text-4xl md:text-5xl font-bold ${
-                      index % 2 === 0 ? 'text-brand-blue  ' : 'text-white'
-                    }`}>
+                    <span className="text-4xl md:text-5xl font-bold text-brand-blue">
                       {plan.price}
                     </span>
-                    <span className={`text-lg ml-2 ${
-                      index % 2 === 0 ? 'text-gray-600' : 'text-white/80'
-                    }`}>{plan.currency}</span>
+                    <span className="text-lg ml-2 text-gray-600">{plan.currency}</span>
                   </div>
 
-
-
-                  <p className={`leading-relaxed ${
-                    index % 2 === 0 ? 'text-gray-600' : 'text-white/90'
-                  }`}>{plan.description}</p>
+                  <p className="leading-relaxed text-gray-600">{plan.description}</p>
                 </div>
 
                 {/* Features List */}
                 <div className="mb-8">
-                  <h4 className={`text-lg font-semibold mb-4 ${
-                    index % 2 === 0 ? 'text-gray-900' : 'text-white'
-                  }`}>Ce qui est inclus</h4>
+                  <h4 className="text-lg font-semibold mb-4 text-gray-900">Ce qui est inclus</h4>
                   <div className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-start gap-3">
-                        <div className={`flex-shrink-0 w-6 h-6 rounded-full ${
-                          index % 2 === 0
-                            ? 'bg-green-100' 
-                            : 'bg-white/20'
-                        } flex items-center justify-center mt-0.5`}>
-                          <Check className={`w-5 h-5 ${
-                            index % 2 === 0 ? 'text-green-500' : 'text-white'
-                          }`} />
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
+                          <Check className="w-5 h-5 text-green-500" />
                         </div>
-                        <p className={`text-sm leading-relaxed ${
-                          index % 2 === 0 ? 'text-gray-600' : 'text-white/90'
-                        }`}>
+                        <p className="text-sm leading-relaxed text-gray-600">
                           {feature}
                         </p>
                       </div>
@@ -177,29 +159,17 @@ const PricingSection: React.FC = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`block w-full text-center py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 ${
-                    index % 2 === 0
-                      ? 'bg-[#0238d6] text-white shadow-lg shadow-[#0238d6]/30 hover:shadow-xl hover:shadow-[#0238d6]/40'
-                      : 'bg-white text-[#0238d6] shadow-lg hover:shadow-xl'
-                  }`}
+                  className="block w-full text-center py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 bg-[#0238d6] text-white shadow-lg shadow-[#0238d6]/30 hover:shadow-xl hover:shadow-[#0238d6]/40"
                 >
                   {plan.buttonText}
                 </motion.a>
               </div>
 
               {/* Corner Accents */}
-              <div className={`absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 ${
-                index % 2 === 0 ? 'border-brand-blue/30' : 'border-white/30'
-              } rounded-tl-3xl`}></div>
-              <div className={`absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 ${
-                index % 2 === 0 ? 'border-purple-500/30' : 'border-white/30'
-              } rounded-tr-3xl`}></div>
-              <div className={`absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 ${
-                index % 2 === 0 ? 'border-brand-blue/30' : 'border-white/30'
-              } rounded-bl-3xl`}></div>
-              <div className={`absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 ${
-                index % 2 === 0 ? 'border-purple-500/30' : 'border-white/30'
-              } rounded-br-3xl`}></div>
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-brand-blue/30 rounded-tl-3xl"></div>
+              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-purple-500/30 rounded-tr-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-brand-blue/30 rounded-bl-3xl"></div>
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-purple-500/30 rounded-br-3xl"></div>
             </motion.div>
           ))}
         </div>
