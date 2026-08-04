@@ -3,53 +3,17 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import AppImage from "../image/AppImage";
 import { openWhatsApp, WHATSAPP_MESSAGES } from "../utils/whatsapp";
-
-
-
-
-
-/* ── Blue bubbles ── */
-const BUBBLES = [
-  { id:1, sz:13, x:"15%", y:"13%", d:0,   dur:4.1 },
-  { id:2, sz:9,  x:"83%", y:"9%",  d:.5,  dur:3.7 },
-  { id:3, sz:18, x:"4%",  y:"50%", d:1.0, dur:5.0 },
-  { id:4, sz:10, x:"91%", y:"46%", d:.3,  dur:4.4 },
-  { id:5, sz:7,  x:"27%", y:"83%", d:1.4, dur:3.5 },
-  { id:6, sz:15, x:"69%", y:"80%", d:.8,  dur:4.7 },
-  { id:7, sz:6,  x:"50%", y:"6%",  d:1.7, dur:3.3 },
-  { id:8, sz:5,  x:"60%", y:"86%", d:2.1, dur:3.2 },
-  { id:9, sz:11, x:"38%", y:"89%", d:.6,  dur:4.5 },
-];
+import HeroGlobe from "./HeroGlobe";
 
 /* ── Main Hero Component ── */
 const Hero: React.FC = () => {
 
   return (
-    <section style={{ position:"relative", minHeight:"100vh", overflow:"hidden" }}
-      className="pt-28 sm:pt-36 md:pt-40 lg:pt-44 pb-20 px-4 flex flex-col items-center justify-center bg-gradient-to-b from-[#0238d6]/10 via-[#0238d6]/5 to-white">
+    <section style={{ position:"relative", minHeight:"100vh", overflow:"hidden", backgroundColor:"#ffffff" }}
+      className="pt-28 sm:pt-36 md:pt-40 lg:pt-44 pb-20 px-4 flex flex-col items-center justify-center">
 
-      {/* BG blobs */}
-      <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[700px] h-[700px] bg-[#0238d6]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[500px] h-[500px] bg-[#0238d6]/3 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Existing shape */}
-      <div className="border-shape-wrapper">
-        <img src="https://cdn.prod.website-files.com/68f591d26620d8104ef1dae4/68f591d46620d8104ef1dba6_Graph%20(2).png"
-          loading="lazy" alt="" className="shape-image" />
-      </div>
-
-      {/* ── Blue bubbles ── */}
-      {BUBBLES.map(b => (
-        <motion.div key={b.id} style={{
-          width:b.sz, height:b.sz, position:"absolute", left:b.x, top:b.y, zIndex:2,
-          borderRadius:"50%", pointerEvents:"none",
-          background:"radial-gradient(circle at 35% 35%,#5fa8ff,#0238d6)",
-          boxShadow:"0 0 10px rgba(2,56,214,.4)",
-        }}
-          animate={{ y:[0,-12,0], scale:[1,1.1,1], opacity:[.6,1,.6] }}
-          transition={{ duration:b.dur, delay:b.d, repeat:Infinity, ease:"easeInOut" }}
-        />
-      ))}
+      {/* ── Globe de bulles bleues ── */}
+      <HeroGlobe />
 
       {/* ── Main content ── */}
       <div className="container mx-auto max-w-6xl text-center relative z-10">
@@ -96,14 +60,6 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
-      <style jsx>{`
-        .border-shape-wrapper{z-index:1;pointer-events:none;display:flex;justify-content:flex-end;align-items:center;max-width:430px;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;height:100%;width:100%;max-height:100vh;}
-        .shape-image{max-width:100%;height:auto;position:absolute;right:0;top:50%;transform:translateY(-50%);object-fit:contain;}
-        @media(max-width:768px){.border-shape-wrapper{max-width:280px;opacity:.7;}}
-        @media(max-width:480px){.border-shape-wrapper{max-width:200px;opacity:.5;}}
-        @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-      `}</style>
     </section>
   );
 };
