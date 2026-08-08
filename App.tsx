@@ -1,4 +1,6 @@
 import React from 'react';
+import Preloader from './src/components/Preloader';
+import CursorGlow from './src/components/CursorGlow';
 import Navbar from './src/components/Navbar';
 import Hero from './src/components/Hero';
 import Stats from './src/components/Stats';
@@ -13,8 +15,11 @@ import CTASection from './src/components/CTASection';
 import Footer from './src/components/Footer';
 
 const App: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden">
+return (
+    <>
+      <Preloader />
+      <div className="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden">
+      <CursorGlow />
       <Navbar />
       <main>
         <Hero />
@@ -29,7 +34,8 @@ const App: React.FC = () => {
         <CTASection />
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

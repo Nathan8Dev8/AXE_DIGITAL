@@ -65,10 +65,10 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-left">
             <h4 className="font-bold text-lg mb-6">Contact</h4>
             <ul className="space-y-4 text-gray-400">
-              {/* <li className="flex items-start gap-3 justify-center md:justify-start">
-                <MapPin className="mt-1 flex-shrink-0 text-brand-blue" size={18} />
-                <span>Bonamoussadi<br />Ecole publique</span>
-              </li> */}
+              <li className="flex items-center gap-3 justify-center md:justify-start">
+                <MapPin className="flex-shrink-0 text-brand-blue" size={18} />
+                <span>Ange Raphael, fin barrière ESSEC</span>
+              </li>
               <li className="flex items-center gap-x-3 justify-center md:justify-start">
                 <Mail className="flex-shrink-0 text-brand-blue" size={19} />
                 <a href="mailto:contact@axedigital.agency" className="hover:text-white break-all">contact@axedigital.agency</a>

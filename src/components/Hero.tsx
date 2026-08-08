@@ -53,12 +53,10 @@ const Hero: React.FC = () => {
                 logoKreads, AppImage.partenaireCodecCm, AppImage.partenaireLyxera, AppImage.partenaireSkynesys,
 AppImage.partenaireSymphoniSocial, AppImage.partenaireZenaeBrand, AppImage.partenaire4,
                 '/assets/Logo/log1.png', '/assets/Logo/log2.png',
-                '/assets/partenaires/WhatsApp Image 2026-08-07 at 21.33.50.png',
                 logoKreads, AppImage.partenaireCodecCm, AppImage.partenaireLyxera, AppImage.partenaireSkynesys,
                 AppImage.partenaireSymphoniSocial, AppImage.partenaireZenaeBrand, AppImage.partenaire4,
                 '/assets/Logo/log1.png', '/assets/Logo/log2.png',
-                '/assets/partenaires/WhatsApp Image 2026-08-07 at 21.33.50.png',
-              ].map((src, i) => <img key={i} src={src} alt="" className="h-12 sm:h-16 md:h-20 w-auto object-contain" />)}
+].map((src, i) => <img key={i} src={src} alt="" className={src === logoKreads ? "h-7 sm:h-9 md:h-11 w-auto object-contain" : "h-12 sm:h-16 md:h-20 w-auto object-contain"} />)}
             </motion.div>
           </div>
         </motion.div>

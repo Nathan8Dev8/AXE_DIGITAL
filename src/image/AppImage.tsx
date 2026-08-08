@@ -63,7 +63,10 @@ abstract class AppImage {
   static readonly solutionPhoto1 = '/assets/solutions/photo_2025-10-25_15-21-37.jpg';
   static readonly solutionPhoto2 = '/assets/solutions/photo_2025-10-26_13-12-39.png';
   static readonly solutionPhoto3 = '/assets/solutions/photo_2025-10-26_13-47-38.jpg';
-  static readonly solutionVitalnest = '/assets/solutions/vitalnest v2_Plan de travail 1-02.png';
+static readonly solutionVitalnest = '/assets/solutions/vitalnest v2_Plan de travail 1-02.png';
+
+  // Preloader
+  static readonly preload = '/assets/preload.png';
 
   // Témoignages image
   static readonly temoignageImage1 = '/assets/temoignages image/323567636_675171821065300_298513977001479607_n.jpg';
