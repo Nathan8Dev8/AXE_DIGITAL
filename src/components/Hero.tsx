@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import AppImage from "../image/AppImage";
+import logoKreads from "../image/logo_Kreads.png";
 import { openWhatsApp, WHATSAPP_MESSAGES } from "../utils/whatsapp";
 import HeroGlobe from "./HeroGlobe";
 
@@ -49,12 +50,14 @@ const Hero: React.FC = () => {
             <motion.div className="flex items-center gap-8 sm:gap-12 md:gap-20 whitespace-nowrap"
               animate={{ x:["-50%","0%"] }} transition={{ x:{ repeat:Infinity, repeatType:"loop", duration:20, ease:"linear" } }}>
               {[
-                AppImage.partenaireCodecCm, AppImage.partenaireLyxera, AppImage.partenaireSkynesys,
+                logoKreads, AppImage.partenaireCodecCm, AppImage.partenaireLyxera, AppImage.partenaireSkynesys,
+AppImage.partenaireSymphoniSocial, AppImage.partenaireZenaeBrand, AppImage.partenaire4,
+                '/assets/Logo/log1.png', '/assets/Logo/log2.png',
+                '/assets/partenaires/WhatsApp Image 2026-08-07 at 21.33.50.png',
+                logoKreads, AppImage.partenaireCodecCm, AppImage.partenaireLyxera, AppImage.partenaireSkynesys,
                 AppImage.partenaireSymphoniSocial, AppImage.partenaireZenaeBrand, AppImage.partenaire4,
                 '/assets/Logo/log1.png', '/assets/Logo/log2.png',
-                AppImage.partenaireCodecCm, AppImage.partenaireLyxera, AppImage.partenaireSkynesys,
-                AppImage.partenaireSymphoniSocial, AppImage.partenaireZenaeBrand, AppImage.partenaire4,
-                '/assets/Logo/log1.png', '/assets/Logo/log2.png',
+                '/assets/partenaires/WhatsApp Image 2026-08-07 at 21.33.50.png',
               ].map((src, i) => <img key={i} src={src} alt="" className="h-12 sm:h-16 md:h-20 w-auto object-contain" />)}
             </motion.div>
           </div>
